@@ -1,7 +1,8 @@
 <div align="center">
-	<img src="README/logo.svg" alt="Proffy logo" height="90">
+	<img src="readme/logo.svg" alt="Proffy logo" height="90">
     <br/>
 </div>
+
 
 
 
