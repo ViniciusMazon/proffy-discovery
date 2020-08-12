@@ -37,7 +37,7 @@
   border-radius: 0.8rem;
   margin-right: 1.6rem;
   font: 700 2.4rem Archivo;
-  color: #FFF;
+  color: var(--color-title-in-primary);
   text-decoration: none;
   display: flex;
   justify-content: center;
