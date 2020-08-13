@@ -10,7 +10,7 @@ db.then(async db => {
   };
 
   classData = {
-    subject: "Inglês",
+    subject: 1,
     cost: '80'
   };
 
@@ -29,7 +29,23 @@ db.then(async db => {
 
   // await createProffy(db, { proffyData, classData, classScheduleData });
 
+  const selectedProffys = await db.all("SELECT * FROM proffys");
 
+  const selectedClassesAndProffys = await db.all(`
+    SELECT classes.*, proffys.*
+    FROM proffys JOIN classes
+    ON (classes.proffy_id = proffys.id)
+    WHERE classes.proffy_id = 1;
+  `);
+
+  const selectedClassesSchedules = await db.all(`
+    SELECT class_schedule.*
+    FROM class_schedule
+    WHERE class_schedule.class_id = 1
+    AND class_schedule.weekday = 0
+    AND class_schedule.time_from <= 530
+    AND class_schedule.time_to > 1120;
+  `);
 });
 
 

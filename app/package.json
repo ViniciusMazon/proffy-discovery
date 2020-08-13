@@ -2,7 +2,8 @@
   "name": "front-end",
   "scripts": {
     "dev": "yarn nodemon ./server.js",
-    "start": "yarn node ./server.js"
+    "start": "yarn node ./server.js",
+    "db:test": "node src/database/test.js"
   },
   "dependencies": {
     "express": "^4.17.1",

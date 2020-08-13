@@ -12,7 +12,7 @@ module.exports = Database.open(__dirname + '/database.sqlite').then(db => {
 
     CREATE TABLE IF NOT EXISTS classes (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
-      subject TEXT NOT NULL,
+      subject INTEGER NOT NULL,
       cost TEXT NOT NULL,
       proffy_id INTEGER NOT NULL
     );
